@@ -7,124 +7,302 @@
 </ion-header>
 
 <ion-content>
+  <!--Media buying, campaign briefing
+   Title:-->
+  <ion-card-title>Media Buying / Campaign Briefing</ion-card-title>
+  <ion-card-header>Product</ion-card-header>
 
-  <form>
-    <div class="section">
-     <div class="sectiontitle">Product</div><br>
-      <div class="row">
-        <span class="rowtitle">Title </span>
-        <input type="text">
-      </div>
-      <div class="row">
-        <span class="rowtitle">Campaign type </span>
-        <span><input type="checkbox"> Soft Launch</span>
-        <span><input type="checkbox"> Commercial Launch</span>
-        <span><input type="checkbox"> Seasonal Special</span>
-        <span><input type="checkbox"> Update</span>
-        <span><input type="checkbox"> Other:<input type="text"></span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">Platform </span>
-        <span><input type="checkbox"> iOS</span>
-        <span><input type="checkbox"> Android</span>
-        <span><input type="checkbox"> Windows</span>
-        <span><input type="checkbox"> Facebook</span>
-        <span><input type="checkbox"> Other:<input type="text"></span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">Available Media SDK's </span>
-        <span><input type="checkbox"> AppsFlyer</span>
-        <span><input type="checkbox"> FaceBook</span>
-        <span><input type="checkbox"> Chartboost</span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">Available Media Assets </span>
-        <span><input type="checkbox"> Key Art</span>
-        <span><input type="checkbox"> Video Footage</span>
-        <span><input type="checkbox"> Playable build (optional UI)</span>
-        <span><input type="checkbox"> Other:<input type="text"></span>
-      </div>
-    </div><br>
+  <ion-list radio-group>
+    <ion-list-header>
+      Campaign type
+    </ion-list-header>
 
+    <ion-item>
+      <ion-label>Soft Launch</ion-label>
+      <ion-radio checked="true"></ion-radio>
+    </ion-item>
 
-    <div class="section">
-     <div class="sectiontitle">Schedule</div><br>
-      <div class="row">
-        <span class="rowtitle">Campaign start </span><input type="text" value="start date">
-      </div>
-      <div class="row">
-        <span class="rowtitle">Campaign end </span> <input type="text" value="end date">
-        <span><input type="checkbox"> Upon consumpiton of overall budget</span>
-      </div>
-    </div><br>
+    <ion-item>
+      <ion-label>Commercial Launch</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Seasonal special</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Update</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-radio></ion-radio>
+      <ion-label>Other:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input></ion-input>
+
+    </ion-item>
+  </ion-list>
 
 
-    <div class="section">
-     <div class="sectiontitle">Targeting Specifications</div><br>
-      <div class="row">
-        <span class="rowtitle">Minimun OS Version </span>
-        <input type="text">
-      </div>
-      <div class="row">
-        <span class="rowtitle">Device Class </span>
-        <span><input type="checkbox"> Phone</span>
-        <span><input type="checkbox"> Tablet</span>
-        <span><input type="checkbox"> Both</span>
-        <span><input type="checkbox"> Preferred Devices:<input type="text"></span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">GEOs </span>
-        <span><input type="checkbox"> T1:<input type="text"></span>
-        <span><input type="checkbox"> T2:<input type="text"></span>
-        <span><input type="checkbox"> T3:<input type="text"></span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">Key Demographics</span>
-        <span><input type="checkbox"> Gender:<input type="text"></span>
-        <span><input type="checkbox"> Age:<input type="text"></span>
-        <span><input type="checkbox"> Other:<input type="text"></span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">Volume Target </span>
-        <span><input type="checkbox"> Daily:<input type="text"> installs</span>
-        <span><input type="checkbox"> Total:<input type="text"> installs</span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">Preferred inventory </span>
-        <span><input type="checkbox"> Social</span>
-        <span><input type="checkbox"> Video</span>
-        <span><input type="checkbox"> Display</span>
-        <span><input type="checkbox"> Cross Promotion</span>
-        <span><input type="checkbox"> Incentivised / Burst</span>
-      </div>
-    </div><br>
+  <ion-list>
 
-    <div class="section">
-     <div class="sectiontitle">Bids & Budjeting</div><br>
-      <div class="row">
-        <span class="rowtitle">Target CPI </span>
-        <span><input type="text" value="USD"></span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">Maximum CPI </span>
-        <span><input type="text" value="USD"></span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">Total Budget </span>
-        <span><input type="text" value="USD"></span>
-      </div>
-      <div class="row">
-        <span class="rowtitle">Daily Budget </span>
-        <span><input type="text" value="USD"></span>
-      </div>
-    </div>
+    <ion-list-header>
+      Platform
+    </ion-list-header>
 
-  </form>
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>iOS</ion-label>
+    </ion-item>
 
-  <p>
-    <button ion-button color="primary">Submit</button>
-  </p>
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>Android</ion-label>
+    </ion-item>
+
+    <ion-item> <!--näin: [(ngModel)]="data.arya"-->
+      <ion-checkbox></ion-checkbox>
+      <ion-label>Windows</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>Facebook</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox checked="true" (ionChange)="isDisabled = !isDisabled"></ion-checkbox>
+      <ion-label>Other:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input [disabled]="isDisabled"></ion-input>
+
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-list-header>
+      Available Media SKD's
+    </ion-list-header>
+
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>AppsFlyer</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>Facebook</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>Chartboost</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-list-header>
+      Available Media Assets
+    </ion-list-header>
+
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>Key Art</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>Video Footage</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>Playable Build (Optional UI)</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox checked="true" (ionChange)="mediaAssetDisabled = !mediaAssetDisabled"></ion-checkbox>
+      <ion-label>Other:</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input [disabled]="mediaAssetDisabled"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-card-header>Schedule</ion-card-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-input></ion-input>
+      <ion-label>Campaign start</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-input [disabled]="campaignEndDisabled"></ion-input>
+      <ion-label>Campaign end</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox checked="false" (ionChange)="campaignEndDisabled = !campaignEndDisabled"></ion-checkbox>
+      <ion-label>Upon consumption of overall budget</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-card-header>Targeting Specifications</ion-card-header>
 
 
+  <ion-item>
+    <ion-label>Minimum OS Version</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-list radio-group>
+    <ion-list-header>
+      Device Class
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Phone</ion-label>
+      <ion-radio checked="true"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tablet</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Both</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Preferred Devices:</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-input></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <br>
+
+  <ion-list>
+    <ion-list-header>GEOs</ion-list-header>
+
+    <ion-item>
+      <ion-label>T1: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>T2: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>T3: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Key Demographics</ion-list-header>
+
+    <ion-item>
+      <ion-label>Gender: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Age: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Other: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Volume Target</ion-list-header>
+
+    <ion-item>
+      <ion-label>Daily installs: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Total installs: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+
+    <ion-list-header>
+      Preferred Inventory
+    </ion-list-header>
+
+    <ion-item>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>Social</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>Video</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox ></ion-checkbox>
+      <ion-label>Display</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>Cross promotion</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox></ion-checkbox>
+      <ion-label>Incentivised / Burst</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-card-header>Bids & Budgeting</ion-card-header>
+
+  <ion-item>
+    <ion-label>Target CPI: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Maximum CPI: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Total Budget: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Daily Budget: </ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <button ion-button color="primary">Submit</button>
 
 </ion-content>
